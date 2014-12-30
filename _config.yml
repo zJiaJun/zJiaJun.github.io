@@ -39,10 +39,10 @@ timezone:      null
 
 
 #Site config
-title: Jekyll Theme
+title: ZhuJiaJun
 description: Just another Jekyll theme design and code by zhanxin.info.
-keywords: Jekyll Theme
-url: http://pizn.github.io/kunka
+keywords: Java
+url: http://zJiaJun.github.io/
 feed: /atom.xml
 favicon: http://jekyllrb.com/favicon.png
 
@@ -105,7 +105,7 @@ customLinks:
 
 #googleAnaly, your id link UA-12345678-X
 googleAnaly:
-  config: true
+  config: false
   id: UA-40169250-1
 
 #comment config
@@ -114,5 +114,5 @@ disqus:
   id: piznblog
 
 duoshuo:
-  config: true
+  config: false
   id: zhanxin
