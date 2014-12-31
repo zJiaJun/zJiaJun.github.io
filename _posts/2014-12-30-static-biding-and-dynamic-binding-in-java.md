@@ -149,7 +149,7 @@ public class TestMain {
 
 下面的代码首先会发生静态绑定，确定调用参数为String对象的call方法，然后在运行时进行动态绑定确定执行子类还是父类的call实现。
 
-```
+```java
 public class TestMain {
   public static void main(String[] args) {
       String str = new String();
@@ -182,15 +182,15 @@ public class TestMain {
 ```
 执行结果为
 
-```
+{% highlight java %}
 22:30 $ java TestMain
 a String instance in in SubCaller
-```
+{% endhighlight %}
 ###验证
 
 由于上面已经介绍，这里只贴一下反编译结果啦
 
-```
+{% highlight java %}
 22:30 $ javap -c TestMain
 Compiled from "TestMain.java"
 public class TestMain {
@@ -215,19 +215,19 @@ public class TestMain {
       18: invokevirtual #6                  // Method TestMain$Caller.call:(Ljava/lang/String;)V
       21: return
 }
-```
+{% endhighlight %}
 好奇问题
 
 非动态绑定不可么？
 
 其实理论上，某些方法的绑定也可以由静态绑定实现。比如
-```
+{% highlight java %}
 public static void main(String[] args) {
       String str = new String();
       final Caller callerSub = new SubCaller();
       callerSub.call(str);
 }
-```
+{% endhighlight %}
 比如这里callerSub持有subCaller的对象并且callerSub变量为final，立即执行了call方法，编译器理论上通过足够的分析代码，是可以知道应该调用SubCaller的call方法。
 
 但是为什么没有进行静态绑定呢？
@@ -235,7 +235,7 @@ public static void main(String[] args) {
 
 假设某框架1.0中的BaseCaller和SuperCaller
 
-```
+{% highlight java %}
 static class SuperCaller {
   public void call(Object obj) {
       System.out.println("an Object instance in SuperCaller");
@@ -247,10 +247,10 @@ static class BaseCaller extends SuperCaller {
       System.out.println("an Object instance in BaseCaller");
   }
 }
-```
+{% endhighlight %}
 而我们使用框架1.0进行了这样的实现。Caller继承自BaseCaller，并且调用了super.call方法。
 
-```
+{% highlight java %}
 public class TestMain {
   public static void main(String[] args) {
       Object obj = new Object();
@@ -281,7 +281,7 @@ public class TestMain {
       }
   }
 }
-```
+{% endhighlight %}
 然后我们基于这个框架的1.0版编译出来了class文件，假设静态绑定可以确定上面Caller的super.call为BaseCaller.call实现。
 
 然后我们再次假设这个框架1.1版本中BaseCaller不重写SuperCaller的call方法，那么上面的假设可以静态绑定的call实现在1.1版本就会出现问题，因为在1.1版本上super.call应该是使用SuperCall的call方法实现，而非假设使用静态绑定确定的BaseCaller的call方法实现。
