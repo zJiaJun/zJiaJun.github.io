@@ -61,7 +61,7 @@ nav:
 
 #Author config
 author:
-    name: 改变世界的码农
+    name: 码农
     email: leoneyes2012@gmail.com
     imageLink: /images/header.jpg
     simpleIntro: 贵在坚持。
@@ -112,5 +112,5 @@ disqus:
   id: piznblog
 
 duoshuo:
-  config: false
+  config: true
   id: zhanxin
