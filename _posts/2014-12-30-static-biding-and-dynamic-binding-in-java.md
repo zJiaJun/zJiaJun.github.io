@@ -21,7 +21,7 @@ category: "Java"
 ###重载方法的示例
 
 这里展示一个重载方法的示例。
-```
+{% highlight java %}
 public class TestMain {
   public static void main(String[] args) {
       String str = new String();
@@ -39,19 +39,19 @@ public class TestMain {
       }
   }
 }
-```
+{% endhighlight %}
 执行的结果为
-```
+{% highlight java %}
 22:19 $ java TestMain
 a String instance in in Caller
-```
+{% endhighlight %}
 在上面的代码中，call方法存在两个重载的实现，一个是接收Object类型的对象作为参数，另一个则是接收String类型的对象作为参数。str是一个String对象，所有接收String类型参数的call方法会被调用。而这里的绑定就是在编译时期根据参数类型进行的静态绑定。
 
 ###验证
 
 光看表象无法证明是进行了静态绑定，使用javap发编译一下即可验证。
 
-```
+{% highlight java %}
 22:19 $ javap -c TestMain
 Compiled from "TestMain.java"
 public class TestMain {
@@ -76,12 +76,12 @@ public class TestMain {
       18: invokevirtual #6                  // Method TestMain$Caller.call:(Ljava/lang/String;)V
       21: return
 }
-```
-看到了这一行```18: invokevirtual #6 // Method TestMain$Caller.call:(Ljava/lang/String;)V```确实是发生了静态绑定，确定了调用了接收String对象作为参数的caller方法。
+{% endhighlight %}
+看到了这一行18: invokevirtual #6 // Method TestMain$Caller.call:(Ljava/lang/String;)V 确实是发生了静态绑定，确定了调用了接收String对象作为参数的caller方法。
 
 重写方法的示例
 
-```
+{% highlight java %}
 public class TestMain {
   public static void main(String[] args) {
       String str = new String();
@@ -102,20 +102,20 @@ public class TestMain {
       }
   }
 }
-```
+{% endhighlight %}
 执行的结果为
 
-```
+{% highlight java %}
 22:27 $ java TestMain
 a String instance in SubCaller
-```
+{% endhighlight %}
 上面的代码，Caller中有一个call方法的实现，SubCaller继承Caller，并且重写了call方法的实现。我们声明了一个Caller类型的变量callerSub，但是这个变量指向的时一个SubCaller的对象。根据结果可以看出，其调用了SubCaller的call方法实现，而非Caller的call方法。这一结果的产生的原因是因为在运行时发生了动态绑定，在绑定过程中需要确定调用哪个版本的call方法实现。
 
 ###验证
 
 使用javap不能直接验证动态绑定，然后如果证明没有进行静态绑定，那么就说明进行了动态绑定。
 
-````
+{% highlight java %}
 22:27 $ javap -c TestMain
 Compiled from "TestMain.java"
 public class TestMain {
@@ -140,8 +140,8 @@ public class TestMain {
       18: invokevirtual #6                  // Method TestMain$Caller.call:(Ljava/lang/String;)V
       21: return
 }
-```
-正如上面的结果，```18: invokevirtual #6 // Method TestMain$Caller.call:(Ljava/lang/String;)V这里是TestMain$Caller.call而非TestMain$SubCaller.call```，因为编译期无法确定调用子类还是父类的实现，所以只能丢给运行时的动态绑定来处理。
+{% endhighlight %}
+正如上面的结果，18: invokevirtual #6 // Method TestMain$Caller.call:(Ljava/lang/String;)V这里是TestMain$Caller.call而非TestMain$SubCaller.call，因为编译期无法确定调用子类还是父类的实现，所以只能丢给运行时的动态绑定来处理。
 
 ###当重载遇上重写
 
