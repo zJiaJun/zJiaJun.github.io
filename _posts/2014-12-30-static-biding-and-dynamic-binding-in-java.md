@@ -149,7 +149,7 @@ public class TestMain {
 
 下面的代码首先会发生静态绑定，确定调用参数为String对象的call方法，然后在运行时进行动态绑定确定执行子类还是父类的call实现。
 
-```java
+{% highlight java %}
 public class TestMain {
   public static void main(String[] args) {
       String str = new String();
@@ -179,7 +179,7 @@ public class TestMain {
       }
   }
 }
-```
+{% endhighlight %}
 执行结果为
 
 {% highlight java %}
