@@ -115,7 +115,6 @@ a String instance in SubCaller
 
 使用javap不能直接验证动态绑定，然后如果证明没有进行静态绑定，那么就说明进行了动态绑定。
 
-```
 {% highlight java %}
 22:27 $ javap -c TestMain
 Compiled from "TestMain.java"
@@ -142,7 +141,7 @@ public class TestMain {
       21: return
 }
 {% endhighlight %}
-```
+
 正如上面的结果，18: invokevirtual #6 // Method TestMain$Caller.call:(Ljava/lang/String;)V这里是TestMain$Caller.call而非TestMain$SubCaller.call，因为编译期无法确定调用子类还是父类的实现，所以只能丢给运行时的动态绑定来处理。
 
 ###当重载遇上重写

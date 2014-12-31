@@ -1,4 +1,5 @@
-zJiaJun.github.io
-=================
+#zJiaJun.github.io
+---
 
-[Blog](http://zjiajun.github.io/)
+##[Blog](http://www.9leg.com/)
+
