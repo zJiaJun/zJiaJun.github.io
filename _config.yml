@@ -68,9 +68,10 @@ author:
     detailIntro:
       <p>使用过很多方式写博客，都没有坚持下来，不是样式难看，就是没有我需要的功能或者太多的功能(其实就是我懒的写吧)。
       用blogjava记录过一段时间，然后看阿里云怎么火，还半年免费，就弄了台云主机搭建搞了一阵子。
-      这域名9leg就是那段时间申请的......废话不多说了，以后想到什么再更新吧。
-      关键在于持之以恒的学习，写文章，那怕是转载过来的，按照自己理解的意思再敲一遍，都比通读一遍印象更深刻。在这里与大家共勉，一起成长。
-      </p>
+      这域名9leg就是那段时间申请的......废话不多说了，以后想到什么再更新吧。</p>
+      <p>关键在于持之以恒的学习，写文章，那怕是转载过来的，按照自己理解的意思再敲一遍，都比通读一遍印象更深刻。</p>
+      <p>在这里与大家共勉，一起成长。</p>
+
 #Follow me, you can choose your icon by http://fortawesome.github.io/Font-Awesome/icons/#brand
 follow:
   - class: icon-rss
@@ -107,7 +108,7 @@ customLinks:
 googleAnaly:
   config: true
   id: UA-58146229-1
-  
+
 #baidu tongji
 baiduTongji:
   config: true
