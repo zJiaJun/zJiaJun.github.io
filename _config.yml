@@ -105,6 +105,9 @@ customLinks:
 googleAnaly:
   config: true
   id: UA-58146229-1
+#baidu tongji
+baiduTongji:
+  config:true
 
 #comment config
 disqus:
