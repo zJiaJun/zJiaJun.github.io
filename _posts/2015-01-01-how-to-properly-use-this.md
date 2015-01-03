@@ -11,7 +11,7 @@ this关键字在java中，通常都是指“这个对象”或者“当前对象
 
 那为什么会有这个关键字呢？
 
-来看下Think in Java中对this的描述，如果有同一类型的两个对象，分别是a和b。你可能想知道，如何才能让过这两个对象都能调用peel(）方法呢：
+来看下Think in Java中对this的描述，如果有同一类型的两个对象，分别是a和b。你可能想知道，如何才能让过这两个对象都能调用peel()方法呢：
 
 {% highlight java %}
 class Foo {
@@ -102,3 +102,5 @@ public class Apple {
 {% endhighlight %}
 上面的代码很简单，构造器*Apple(String s,int value)*表明，尽管可以用this调用一个构造器，但却不能调用两个。此外，必须将构造器调用置于最起始处，否则编译器会报错。
 这里还展示了this的另一种用法。由于参数s的名称和数据成员s的名字相同，会产生歧义，使用*this.s*来代表数据成员就能解决。
+
+原创文章转载请注明出处：[this的由来和正确的使用方式](http://www.9leg.com/java/2015/01/01/how-to-properly-use-this.html)
