@@ -2,7 +2,7 @@
 layout: post
 title: this的由来和正确的使用方式
 date: 2015-01-01 22:27:30
-category: "Java"
+category: "java"
 ---
 
 this关键字在java中，通常都是指“这个对象”或者“当前对象”的含义，它本身表示对当前对象的引用。

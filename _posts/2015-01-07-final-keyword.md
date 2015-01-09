@@ -2,7 +2,7 @@
 layout: post
 title: Java的final关键字
 date: 2015-01-07 20:57
-category: "Java"
+category: "java"
 ---
 
 编程语言都有某种方法，来向编译器告知一块数据是恒定不变的。有时数据的恒定不变是很有用的，比如：

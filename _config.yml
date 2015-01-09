@@ -94,15 +94,17 @@ customLinks:
       url: http://jekyllrb.com
     - text: Jekyll Theme
       url: http://www.zhanxin.info/themes.html
-    message: Friends
+    message: Friends    
   - item:
-    - text: Font Awesome
-      url: http://fortawesome.github.io/Font-Awesome/
-    - text: Google Font
-      url: http://www.google.com/fonts/
-    - text: jQuery
-      url: http://jquery.com/
-    message: 其他相关链接
+    - text: Java Code Geeks
+      url: http://www.javacodegeeks.com/
+    - text: Web Developer
+      url: http://www.fromdev.com/
+    - text: BeginnersBook
+      url: http://beginnersbook.com/
+      text: Mkyong
+      url: http://www.mkyong.com/
+    message: About Java
 
 #googleAnaly, your id link UA-12345678-X
 googleAnaly:
