@@ -104,6 +104,8 @@ customLinks:
       url: http://beginnersbook.com/
       text: Mkyong
       url: http://www.mkyong.com/
+      text: Java By Nataraj
+      url: http://javabynataraj.blogspot.in/
     message: About Java
 
 #googleAnaly, your id link UA-12345678-X
