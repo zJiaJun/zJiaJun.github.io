@@ -40,9 +40,9 @@ public class EnumTest {
 
 	public static void main(String[] args) {	
 	//Solution: Uses valueOf()
-				System.out.println(WhoisRIR.valueOf("arin".toUpperCase()));
+	System.out.println(WhoisRIR.valueOf("arin".toUpperCase()));
 	//Recommended Solution: add locale	
-		WhoisRIR rir =   WhoisRIR.valueOf("ripe".toUpperCase(Locale.ENGLISH));
+	WhoisRIR rir =   WhoisRIR.valueOf("ripe".toUpperCase(Locale.ENGLISH));
 		System.out.println(rir);
 		System.out.println(rir.getUrl());
 	}
@@ -73,13 +73,13 @@ public class EnumTest {
 
 {% highlight java %}
 Exception in thread "main" java.lang.IllegalArgumentException: 
-                    No enum constant com.mkyong.whois.utils.WhoisRIR.arin
+    No enum constant com.mkyong.whois.utils.WhoisRIR.arin
 	at java.lang.Enum.valueOf(Unknown Source)
 	at com.mkyong.whois.utils.WhoisRIR.valueOf(WhoisRIR.java:1)
 	at com.mkyong.whois.utils.TestEnum.main(TestEnum.java:17)
 {% endhighlight%}
 
 
-原创文章转载请注明出处:[](http://www.9leg.com/java/2015/01/09/java-convert-string-to-enum-object.html)
+原创文章转载请注明出处:[Java字符串转枚举类型](http://www.9leg.com/java/2015/01/09/java-convert-string-to-enum-object.html)
 
 [英文原文链接](http://www.mkyong.com/java/java-convert-string-to-enum-object/)
