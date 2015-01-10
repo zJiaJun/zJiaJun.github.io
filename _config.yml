@@ -102,9 +102,9 @@ customLinks:
       url: http://www.fromdev.com/
     - text: BeginnersBook
       url: http://beginnersbook.com/
-      text: Mkyong
+    - text: Mkyong
       url: http://www.mkyong.com/
-      text: Java By Nataraj
+    - text: Java By Nataraj
       url: http://javabynataraj.blogspot.in/
     message: About Java
 
