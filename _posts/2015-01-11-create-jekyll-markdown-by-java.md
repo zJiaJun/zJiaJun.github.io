@@ -28,10 +28,6 @@ public class CreateMDFile {
 	private static final String MARKDOWN_RULE = "---";
 	
 	private static final String MARKDOWN_FILE = ".md";
-	//开始语法高亮
-	private static final String HIGHLIGHT = "{% highlight java %}";
-	//结束语法高亮
-	private static final String ENDHIGHLIGHT = "{% endhighlight %}";
 	
 	private static final String AUTHOR = "原创文章转载请注明出处: " ;
 	
@@ -80,13 +76,7 @@ public class CreateMDFile {
 				pw.println("category: "+ "\"" + postCategory + "\"");
 				pw.println(MARKDOWN_RULE);
 				for (int i = 0;i < 10;i++) {
-					pw.println();
-				}
-				for (int i = 0;i < 3;i++) {
-					pw.println(HIGHLIGHT);
-					pw.println();
-					pw.println(ENDHIGHLIGHT);
-					pw.println();
+					pw.println();//空行
 				}
 				pw.println(
 						AUTHOR + "[" + postTitle +"]" + 
@@ -132,45 +122,7 @@ java com.zjiajun.java.markdown.CreateMDFile  ${filetitle} ${posttitle} ${postcat
 echo ---End---
 {% endhighlight %}
 
-来看下效果:
-
-{% highlight java%}
-
----
-layout: post
-title: post-title
-date: 2015-01-11 19:31:01
-category: "java"
----
-
-
-
-
-
-
-
-
-
-
-{% highlight java %}
-
-{% endhighlight %}
-
-{% highlight java %}
-
-{% endhighlight %}
-
-{% highlight java %}
-
-{% endhighlight %}
-
-原创文章转载请注明出处: [post-title](http://www.9leg.com/java/2015/01/11/file-title.html)
-
-[转载]()
-
-{% endhighlight %}
-
-这样就方便多了，专注内容的写作。
+这样就方便多了，运行下sh,自动生成文件头部信息和一些其他的信息，这样就可以更专注内容的写作。
 
 
 原创文章转载请注明出处: [初始化Jekyll的markdown文件](http://www.9leg.com/other/2015/01/11/create-jekyll-markdown-by-java.html)
