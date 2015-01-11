@@ -6,14 +6,16 @@ category: "other"
 ---
 
 自从用了Jekyll，每次写文章前，在正文开始处都要加入一段描述（[FrontMatter](http://jekyllrb.com/docs/frontmatter/)）。下面就是这篇文章的FrontMatter。
-```
+
+{% highlight java %}
 ---
 layout: post
 title: 初始化Jekyll的markdown文件
 date: 2015-01-11 15:17:32
 category: "other"
 ---
-```
+{% endhighlight %}
+
 每次不是复制这段内容，就是再敲一遍。这多low啊，逼格去哪里了？请看下面的代码：
 
 {% highlight java %}
