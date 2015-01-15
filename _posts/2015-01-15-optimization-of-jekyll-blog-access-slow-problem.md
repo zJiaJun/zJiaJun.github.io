@@ -74,6 +74,6 @@ baiduTongji:
 注意：这里使用了percent sign英文单词来代替%，否则会当做判断实际执行。
 {% endhighlight %}
 
-最后测试了下，完成资源文件的请求保持在4-6秒之间，比之前快了许多，可以说是秒开了。
+最后测试了下，第一次访问请求资源文件保持在1-2秒之间，再次访问保持在400ms－600ms之间，比之前快了许多，可以说是秒开了。
 
 原创文章转载请注明出处: [优化Jekyll博客访问慢的问题](http://www.9leg.com/other/2015/01/15/optimization-of-jekyll-blog-access-slow-problem.html)
