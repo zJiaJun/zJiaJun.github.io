@@ -149,7 +149,7 @@
         {% endif %}
 		<script type="text/javascript">
 		function addBlankTargetForLinks () {
-			$('a[href^="http"]').each(function(){
+			$('.article article-post a[href^="http"]').each(function(){
 				$(this).attr('target', '_blank');
 			});
 		}
