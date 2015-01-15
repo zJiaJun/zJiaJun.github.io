@@ -78,8 +78,8 @@ follow:
     url: /atom.xml
   - class: icon-weibo
     url: http://weibo.com/
-  - class: icon-renren
-    url: http://renren.com
+  - class: icon-facebook
+    url: http://facebook.com/
   - class: icon-github-alt
     url: http://github.com/
   - class: icon-twitter
