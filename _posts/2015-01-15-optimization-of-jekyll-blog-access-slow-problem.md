@@ -9,7 +9,7 @@ category: "other"
 
 ### 多余但必须的废话
 平时开着VPN，访问速度倒是不慢，在国内还是很有必要为自己搞一个稳定vpn的，至于原因你们都懂的，除非你肉神翻墙。那么问题来了，哪家vpn稳定且技术强？在这里推荐自己用了很长时间的vpn,不管是看YouTube，还是上google的developer.android.com速度都是刚刚的。
-[我的云梯](http://kuaitizi.com/?r=7ffa784e42249e0f)，通过这个链接购买的用户，可以优惠10元哦。
+[我的云梯](http://kuaitizi.com/?r=7ffa784e42249e0f){target="_blank"}，通过这个链接购买的用户，可以优惠10元哦。
 
 ### 优化资源文件
 回归正题，那怎么优化国内访问速度问题呢？
@@ -21,7 +21,7 @@ category: "other"
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 {% endhighlight %}
 
-那么只要请求国内的资源文件就行了，或者你有个人空间，可以直接访问google的资源文件，复制并保存文件，接下来就是引用保存的文件就行了。在这里还是推荐第一种方式，使用现成的**国内前端公共库**像[www.freecdn.cn/](http://www.freecdn.cn/),[libs.useso.com/](http://libs.useso.com/)，这些公共库都是通过CDN服务优化过的。还有许多，在这里就不一一列举了，有兴趣的朋友可以看下这篇文章[盘点国内网站常用的一些 CDN 公共库加速服务](http://www.cnbeta.com/articles/304469.htm)。目前我使用的是360的公共库[libs.useso.com](http://libs.useso.com/)，对我来说已经足够了。
+那么只要请求国内的资源文件就行了，或者你有个人空间，可以直接访问google的资源文件，复制并保存文件，接下来就是引用保存的文件就行了。在这里还是推荐第一种方式，使用现成的**国内前端公共库**像[www.freecdn.cn/](http://www.freecdn.cn/){:target="_blank"},[libs.useso.com/](http://libs.useso.com/)，这些公共库都是通过CDN服务优化过的。还有许多，在这里就不一一列举了，有兴趣的朋友可以看下这篇文章[盘点国内网站常用的一些 CDN 公共库加速服务](http://www.cnbeta.com/articles/304469.htm)。目前我使用的是360的公共库[libs.useso.com](http://libs.useso.com/)，对我来说已经足够了。
 
 360的公共库使用方式很简单，只需简单的把*googleapis*替换为*useso*,如下：
 
