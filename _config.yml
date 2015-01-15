@@ -110,7 +110,7 @@ customLinks:
 
 #googleAnaly, your id link UA-12345678-X
 googleAnaly:
-  config: true
+  config: false
   id: UA-58146229-1
 
 #baidu tongji
