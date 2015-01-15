@@ -5,7 +5,7 @@ date: 2015-01-11 15:17:32
 category: "other"
 ---
 
-自从用了Jekyll，每次写文章前，在正文开始处都要加入一段描述（[FrontMatter](http://jekyllrb.com/docs/frontmatter/)）。下面就是这篇文章的FrontMatter。
+自从用了Jekyll，每次写文章前，在正文开始处都要加入一段描述（[FrontMatter](http://jekyllrb.com/docs/frontmatter/){:target="_blank"}）。下面就是这篇文章的FrontMatter。
 
 {% highlight java %}
 ---

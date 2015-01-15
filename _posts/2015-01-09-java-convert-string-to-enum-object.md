@@ -82,4 +82,4 @@ Exception in thread "main" java.lang.IllegalArgumentException:
 
 原创文章转载请注明出处:[Java字符串转枚举类型](http://www.9leg.com/java/2015/01/09/java-convert-string-to-enum-object.html)
 
-[英文原文链接](http://www.mkyong.com/java/java-convert-string-to-enum-object/)
+[英文原文链接](http://www.mkyong.com/java/java-convert-string-to-enum-object/){:target="_blank"}
