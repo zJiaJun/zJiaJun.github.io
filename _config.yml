@@ -90,6 +90,8 @@ follow:
 #Links
 customLinks:
   - item:
+    - text: droidyue
+      url: http://droidyue.com/
     - text: Jekyll
       url: http://jekyllrb.com
     - text: Jekyll Theme
