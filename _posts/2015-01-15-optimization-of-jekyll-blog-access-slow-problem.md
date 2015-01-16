@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 优化Jekyll博客访问慢的问题
+title: 优化Jekyll博客访问慢的问题。
 date: 2015-01-15 12:32:10
 category: "other"
 ---
