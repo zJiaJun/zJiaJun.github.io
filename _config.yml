@@ -118,6 +118,7 @@ googleAnaly:
 #baidu tongji
 baiduTongji:
   config: true
+  id: c12b560f0372d5995701449b9eac606c
 
 #comment config
 disqus:
@@ -127,3 +128,8 @@ disqus:
 duoshuo:
   config: true
   id: 9leg
+
+#baidu share config
+baiduShare:
+  config: true
+  
