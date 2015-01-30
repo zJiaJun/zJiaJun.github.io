@@ -731,3 +731,7 @@ a         { color: #91736b; text-decoration: none; }
     height: 80px;
     margin: 0 auto;
 }
+
+.bdsharebuttonbox a:hover {
+	color: rgba(255, 255, 255, 0.8);
+}
