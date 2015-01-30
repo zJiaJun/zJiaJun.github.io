@@ -192,6 +192,9 @@ a         { color: #91736b; text-decoration: none; }
 .main .article a:hover {
     border-bottom: 3px double rgba(0, 0, 0, 0.1);
 }
+.main .article .bdsharebuttonbox a:hover {
+	border-bottom: 0px solid rgba(0, 0, 0, 0.1);
+}
 .main .article blockquote {
     position: relative;
     padding: 10px 10px;
@@ -730,8 +733,4 @@ a         { color: #91736b; text-decoration: none; }
     padding-top: 20px;
     height: 80px;
     margin: 0 auto;
-}
-
-.bdsharebuttonbox a:hover {
-	color: rgba(255, 255, 255, 0.8);
 }
