@@ -52,4 +52,4 @@ mvn -X archetype:generate -DgroupId=com.9leg.app -DartifactId=my-app -Darchetype
 
 参考:[ARCHETYPE-202](http://jira.codehaus.org/browse/ARCHETYPE-202){:target="_blank"}
 
-原创文章转载请注明出处: [用mvn骨架生成项目速度慢的问题](http://9leg.com/other/2015/02/01/why-is-mvn-archetype-generate-so-low.html)
+原创文章转载请注明出处: [用mvn骨架生成项目速度慢的问题](http://9leg.com/maven/2015/02/01/why-is-mvn-archetype-generate-so-low.html)
