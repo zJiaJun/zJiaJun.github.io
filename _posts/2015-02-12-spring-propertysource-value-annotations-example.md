@@ -145,7 +145,7 @@ public class MockConfigTest {
 首先使用**@Component**注解声明，接着就是属性字段上的**@Value**注解，但在这里比较特殊，是通过**split()**方法，将配置文件中的9leg，spring分割后组成list对象。心细的同学可能注意到了**server.host**这个key并不存在配置文件中。是的,在这里使用的是默认值，即127.0.0.1,它的格式是这样的。
 
 {% highlight java %}
-@value("${key:default")
+@value("${key:default}")
 private String var;
 {% endhighlight %}
 
@@ -164,6 +164,6 @@ Server Host : 127.0.0.1
 Server Jdbc : com.mysql.jdbc.Driver
 {% endhighlight %}
 
-最后要说一点，在main方法中请使用**new AnnotationConfigApplicationContext(AppConfigTest.class);**来代替**new ClassPathXmlApplicationContext("spring/applicationContext.xml");**或者**new FileSystemXmlApplicationContext("src/main/resources/spring/applicationContext.xml");**。
+最后要说一点，在main方法中请使用**new AnnotationConfigApplicationContext(AppConfigTest.class)**来代替**new ClassPathXmlApplicationContext("applicationContext.xml")**或者**new FileSystemXmlApplicationContext("src/main/resources/applicationContext.xml")**。
 
 原创文章转载请注明出处: [Spring的@PropertySource和@Value注解例子](http://9leg.com/spring/2015/02/12/spring-propertysource-value-annotations-example.html)
