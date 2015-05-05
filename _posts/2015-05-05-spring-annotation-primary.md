@@ -121,6 +121,6 @@ public class SingerService {
 }
 {% endhighlight %}
 
-原创文章转载请注明出处: [Spring注解@Primary](http://9leg.com/java/2015/05/05/spring-annotation-primary.html)
+原创文章转载请注明出处: [Spring注解@Primary](http://9leg.com/spring/2015/05/05/spring-annotation-primary.html)
 
 [英文原文链接](http://www.javacodegeeks.com/2015/04/spring-annotations-i-never-had-the-chance-to-use-part-1-primary.html){:target="_blank"}
