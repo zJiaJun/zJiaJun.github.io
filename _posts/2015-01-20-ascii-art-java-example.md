@@ -85,4 +85,4 @@ public class ASCIIArt {
 原创文章转载请注明出处: [用Java生成ASCII艺术字
 ](http://9leg.com/java/2015/01/20/ascii-art-java-example.html)
 
-[英文原文链接](http://www.mkyong.com/java/ascii-art-java-example/)
+[英文原文链接](http://www.mkyong.com/java/ascii-art-java-example/){:target="_blank"}
