@@ -54,7 +54,7 @@ public class CreateMDFile {
 		
 		String userHome = System.getProperties().getProperty("user.home",USER_HOME);
 		
-		String fileTime = getFormatTime("YYYY-MM-DD");
+		String fileTime = getFormatTime("yyyy-MM-dd");
 		// /Users/zhujiajun/Work/_posts
 		String fileDir =  userHome + POST_DIR;
 		// /2015-01-11-FileTitle.md
@@ -62,7 +62,7 @@ public class CreateMDFile {
 		
 		File file = new File(fileDir + fileName);
 		
-		String postTime = getFormatTime("YYYY-MM-DD HH:mm:ss");
+		String postTime = getFormatTime("yyyy-MM-dd HH:mm:ss");
 		
 		PrintWriter pw = null;
 		try {
@@ -80,7 +80,7 @@ public class CreateMDFile {
 				}
 				pw.println(
 						AUTHOR + "[" + postTitle +"]" + 
-				"("+ WEB_SITE + postCategory + getFormatTime("/YYYY/MM/DD/") + fileTitle + HTML +")");
+				"("+ WEB_SITE + postCategory + getFormatTime("/yyyy/MM/dd/") + fileTitle + HTML +")");
 				if (isReprint) {
 					pw.println();
 					pw.println("[转载]()");
