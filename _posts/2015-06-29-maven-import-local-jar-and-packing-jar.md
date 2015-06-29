@@ -10,7 +10,7 @@ category: "maven"
 先大致介绍下项目环境，以便能够更好的理解。
 首先项目是分多模块的，3个jar包，1个war包。其中2个jar包是任务运行，批处理，监控等，发短信的功能就在其中一个jar中完成。还有个jar是core包，一些通用的公用的类，配置文件，services服务等。war包就是个服务接口，利用SpringMVC完成。
 
-以下所有的修改都做一个任务jar中。
+以下所有的修改都在一个任务jar中。
 
 从第三方下载的jar复制到src/main/resources/lib目录下(新建lib目录),
 
@@ -129,7 +129,7 @@ Class-Path: lib/SMS_SDK_JAVA_v2.6.3r.jar lib/org.apache.oltu.oauth2.resourceserv
 {% endhighlight %}
 
 另外如果有需要可以定制MF文件,参考[Apache Maven manifestEntries官网说明](http://maven.apache.org/shared-archives/maven-archiver-LATEST/examples/manifestEntries.html){:target="_blank"}
-[IBM Apache Maven您不知道的5件事](http://www.ibm.com/developerworks/cn/java/j-5things13/){:target="_blank"}
+和[IBM Apache Maven您不知道的5件事](http://www.ibm.com/developerworks/cn/java/j-5things13/){:target="_blank"}
 
 
-原创文章转载请注明出处: [Maven引入本地jar包并生成jar包运行](http://9leg.com/maven/2015/06/29/2015-06-29-maven-import-local-jar-and-packing-jar.html)
+原创文章转载请注明出处: [Maven引入本地jar包并生成jar包运行](http://9leg.com/maven/2015/06/29/maven-import-local-jar-and-packing-jar.html)
