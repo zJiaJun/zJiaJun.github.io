@@ -54,8 +54,8 @@ nav:
     url: /categories.html
   - text: 文章归档
     url: /archives.html
-  - text: 联系我
-    url: /contact.html
+  - text: 关于我
+    url: /about.html
   - text: 友情链接
     url: /links.html
 
@@ -66,11 +66,9 @@ author:
     imageLink: /images/header.jpg
     simpleIntro: 贵在坚持 让梦想照进现实
     detailIntro:
-      <p>使用过很多方式写博客，都没有坚持下来，不是样式难看，就是没有我需要的功能或者太多的功能(其实就是我懒的写吧)。
-      用blogjava记录过一段时间，然后看阿里云怎么火，还半年免费，就弄了台云主机搭建搞了一阵子。
-      这域名9leg就是那段时间申请的......废话不多说了，以后想到什么再更新吧。</p>
-      <p>关键在于持之以恒的学习，写文章，那怕是转载过来的，按照自己理解的意思再敲一遍，都比通读一遍印象更深刻。</p>
-      <p>在这里与大家共勉，一起成长。</p>
+      <p>高中时期天赋技能选错,接触了电脑编程,一发不可收拾,成了程序员一枚.</p>
+      <p>主要使用Java,会一点Android,正在学习Scala.</p>
+      <p></p>
 
 #Follow me, you can choose your icon by http://fortawesome.github.io/Font-Awesome/icons/#brand
 follow:
@@ -81,7 +79,7 @@ follow:
   - class: icon-facebook
     url: http://facebook.com/
   - class: icon-github-alt
-    url: http://github.com/
+    url: https://github.com/zJiaJun/
   - class: icon-twitter
     url: http://twitter.com/
   - class: icon-google-plus
