@@ -77,4 +77,4 @@ public SharedPreferences getSharedPreferences(String name, int mode) {
 这是祖宗,自定义文件名称,操作模式可选,完美.
 
 
-原创文章转载请注明出处：[SharedPreference.Editor中commit和apply区别](http://www.9leg.com/android/2015/07/12/whats-the-difference-between-commit-and-apply-in-shared-preference.html)
+原创文章转载请注明出处：[SharedPreference.Editor中commit和apply区别](http://9leg.com/android/2015/07/12/whats-the-difference-between-commit-and-apply-in-shared-preference.html)
