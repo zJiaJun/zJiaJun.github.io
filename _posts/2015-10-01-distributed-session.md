@@ -66,6 +66,6 @@ Session复制顾名思义，就是每台应用服务，都保存会话session数
 ### 总结
 这4种方案都是可用的方案，我比较倾向于使用Session集中管理，不过这4种方案都各有优劣，需要根据具体的实际场景做出合适的选择。
 
-本文同时发表在[分布式会话session管理 | 并发编程网 - ifeve.com](http://ifeve.com/dis-session-manager/){:target="_blank"}
+本文同时发表在[并发编程网 - ifeve.com](http://ifeve.com/dis-session-manager/){:target="_blank"}
 
 原创文章转载请注明出处：[大型网站之分布式会话管理](http://9leg.com/design/2015/10/01/distributed-session.html)
