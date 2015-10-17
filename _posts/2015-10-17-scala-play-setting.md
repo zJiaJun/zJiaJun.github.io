@@ -35,19 +35,24 @@ category: "scala"
 将下载的sbt-0.13.8.zip(大约1MB)解压至你的目录,进入sbt-0.13.8目录，可以看见2个文件夹，分别是bin和conf，
 显而易见，bin目录下的是可执行文件，conf目录下是配置文件。
 用文本工具打开bin目录下的sbt,可以看到如下的声明:
-{% highlight shell %}
+
+{% highlight java %}
 declare -r etc_sbt_opts_file="${sbt_home}/conf/sbtopts"
 declare -r win_sbt_opts_file="${sbt_home}/conf/sbtconfig.txt"
 {% endhighlight %}
+
 ${sbt_home}是系统变量，就像java_home一样,所以要先增加这个变量，否则就算修改了conf目录下的配置文件，也是没有效果的。
 打开终端，输入命令 cd ~(进入用户目录，个人习惯修改用户目录下的.bash_profile文件),vi .bash_profile,
 新增如下:
-{% highlight shell %}
+
+{% highlight java %}
 SBT_HOME=/Users/zhujiajun/Work/sbt-0.13.8
 export PATH=$SBT_HOME/bin:$PATH
 {% endhighlight %}
+
 第一行设置sbt_home,第二行可以方便使用sbt命令,当然请填写你的实际地址,保存并退出,最后别忘了source .bash_profile，使修改的文件生效。
 接着，就可以修改conf目录下的配置文件了，修改sbtopts文件，文本工具打开并修改,修改3个值就可以,如下:
+
 {% highlight java %}
 # Path to global settings/plugins directory (default: ~/.sbt)
 #
@@ -61,6 +66,7 @@ export PATH=$SBT_HOME/bin:$PATH
 #
 -ivy ~/Work/ivy-repository
 {% endhighlight %}
+
 到这一步，在终端使用sbt相关命令的时候，都会使用指定的目录。开发的时候，还是要依然IDE，后面就说明如何在IDEA中也使用指定的目录。
 首先，打开IDEA的Default Setting(注意不是"cmd+,",Default Setting是全局默认设置，而另外个For current project,
 以后就不必为每个项目都设置一遍了),搜索SBT,SBT设置页面最下面默认设的是Bundled,我们选择Custom，指定前面解压出来的bin目录下的sbt-launch.jar。
@@ -71,9 +77,10 @@ export PATH=$SBT_HOME/bin:$PATH
 
 
 
-http://www.scala-sbt.org/0.13/tutorial/zh-cn/Manual-Installation.html
-http://www.scala-sbt.org/0.13/tutorial/zh-cn/Activator-Installation.html
-https://www.playframework.com/documentation/2.4.x/Migration24
-https://playframework.com/documentation/2.4.x/JavaDependencyInjection
+参考:
+- [http://www.scala-sbt.org/0.13/tutorial/zh-cn/Manual-Installation.html]{:target="_blank"}
+- [http://www.scala-sbt.org/0.13/tutorial/zh-cn/Activator-Installation.html]{:target="_blank"}
+- [https://www.playframework.com/documentation/2.4.x/Migration24]{:target="_blank"}
+- [https://playframework.com/documentation/2.4.x/JavaDependencyInjection](https://playframework.com/documentation/2.4.x/JavaDependencyInjection){:target="_blank"}
 
-原创文章转载请注明出处：[大型网站之分布式会话管理](http://9leg.com/scala/2015/10/17/scala-play-setting.html)
+原创文章转载请注明出处：[基于play-scala的sbt目录和ivy仓库设置](http://9leg.com/scala/2015/10/17/scala-play-setting.html)
