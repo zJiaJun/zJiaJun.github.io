@@ -172,7 +172,7 @@ play 2.4.3不支持java1.6和1.7了，否则导入IDEA构建的时候，就会�
 java.lang.UnsupportedClassVersionError: play/runsupport/classloader/ApplicationClassLoaderProvider : Unsupported major.minor version 52.0
 {% endhighlight %}
 
-另附上一段官方说明:"The support for Java 6 and Java 7 was dropped and Play 2.4 now requires Java 8.",[详细官方说明](https://playframework.com/documentation/2.4.x/JavaDependencyInjection){:target="_blank"}
+另附上一段官方说明:"The support for Java 6 and Java 7 was dropped and Play 2.4 now requires Java 8.",[详细官方说明](https://www.playframework.com/documentation/2.4.x/Migration24){:target="_blank"}
 
 build.sbt修改完成.然后进入project目录修改plugins.sbt文件，将第一行的play插件依赖的版本号修改为2.3.9，默认是2.4.3，原因之前已经说明了。
 
@@ -195,9 +195,11 @@ object Application extends Controller {
 
 
 参考:
-- [http://www.scala-sbt.org/0.13/tutorial/zh-cn/Manual-Installation.html](http://www.scala-sbt.org/0.13/tutorial/zh-cn/Manual-Installation.html){:target="_blank"}
-- [http://www.scala-sbt.org/0.13/tutorial/zh-cn/Activator-Installation.html](http://www.scala-sbt.org/0.13/tutorial/zh-cn/Activator-Installation.html){:target="_blank"}
-- [https://www.playframework.com/documentation/2.4.x/Migration24](https://www.playframework.com/documentation/2.4.x/Migration24){:target="_blank"}
-- [https://playframework.com/documentation/2.4.x/JavaDependencyInjection](https://playframework.com/documentation/2.4.x/JavaDependencyInjection){:target="_blank"}
+
+
+[http://www.scala-sbt.org/0.13/tutorial/zh-cn/Manual-Installation.html](http://www.scala-sbt.org/0.13/tutorial/zh-cn/Manual-Installation.html){:target="_blank"}
+[http://www.scala-sbt.org/0.13/tutorial/zh-cn/Activator-Installation.html](http://www.scala-sbt.org/0.13/tutorial/zh-cn/Activator-Installation.html){:target="_blank"}
+[https://www.playframework.com/documentation/2.4.x/Migration24](https://www.playframework.com/documentation/2.4.x/Migration24){:target="_blank"}
+[https://playframework.com/documentation/2.4.x/JavaDependencyInjection](https://playframework.com/documentation/2.4.x/JavaDependencyInjection){:target="_blank"}
 
 原创文章转载请注明出处：[基于play-scala的sbt目录和ivy仓库设置](http://9leg.com/scala/2015/10/17/scala-play-setting.html)
