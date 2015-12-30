@@ -621,7 +621,7 @@ a         { color: #91736b; text-decoration: none; }
     background: #99b9c4;
     color: #fff;
     margin-right: 10px;
-    padding: 3px 20px;
+    padding: 3px 10px; /* 修改分类目录标签换行显示问题 */
     float: left;
 }
 .main .categories .categories-item a {
