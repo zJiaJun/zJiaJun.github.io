@@ -119,7 +119,8 @@ repositories文件，填写访问速度快的仓库地址，会覆盖默认的re
   repository-config: /Users/zhujiajun/Work/sbt/repositories
 {% endhighlight %}
 
-- 2016.02.05更新
+- 2016.02.05更新开始
+
 针对在IDEA中设置不起作用的问题,今天又查了下文档,终于解决了.不知道和IDEA升级到15版本是否有关系,因为我记得之前的14系列版本,也是这样设置的,然而不起作用,
 也有可能是我记错了.
 在IDEA的设置菜单中Build Tools下的sbt,我设置了Launcher(sbt-launcher.jar)为Custom的,就是指定修改后的sbt-launcher.jar,然而在refresh sbt项目
@@ -143,7 +144,7 @@ repositories文件，填写访问速度快的仓库地址，会覆盖默认的re
 再refresh下项目,搞定.PS:在sbt设置的时候,建议勾上Download Sources选择,这样jar包sources会自动下载到ivh仓库里.否则当你打开源码包类文件的时候,
 根据IDEA提示再去下载sources,此时并不会下载在ivy仓库中,而会下载至用户目录下的.ideaLibSources/文件中.
 
-- 2016.02.05更新
+- 2016.02.05更新结束
 
 下面给出repositories文件内容，配置了OSC China的国内仓库，会优先去这里下载，没有的话去官方仓库下载，在下载jar的时候发现，大多数jar包会去官方
 仓库下载，一些常用的可以在OSC上下载到，毕竟OSC是maven仓库地址。
