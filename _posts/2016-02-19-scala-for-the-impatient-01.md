@@ -27,11 +27,10 @@ category: "scala"
 
 - 多个值或变量可以放在一起声明：
 
-{% highlight scala %}
+```scala
 val xmax,ymax = 100
 var name,msg = null
-{% endhighlight %}
-
+```
 - scala和java一样，也有7种数值类型：Byte，Short，Int，Long，Float，Double，Char，还有一个Boolean类型。
 
 - 上面类型在scala中都是类，并不刻意区分基本类型和引用类型。
@@ -52,10 +51,10 @@ var name,msg = null
 
 - 伴生对象的apply方法是scala中是构建对象的常用方法。
 
-{% highlight scala %}
-"Hello".(4) //简写
+```scala
+`"Hello".(4) //简写
 "Hello".apply(4)
-{% endhighlight %}
+```
 
 输出都是为o。在StringOps类定义了 def apply(n: Int): Char方法。
 
