@@ -27,7 +27,7 @@ category: "scala"
 
 - 多个值或变量可以放在一起声明：
 
-{% highlight java %}
+{% highlight scala %}
 val xmax,ymax = 100
 var name,msg = null
 {% endhighlight %}
@@ -52,7 +52,7 @@ var name,msg = null
 
 - 伴生对象的apply方法是scala中是构建对象的常用方法。
 
-{% highlight java %}
+{% highlight scala %}
 "Hello".(4) //简写
 "Hello".apply(4)
 {% endhighlight %}
