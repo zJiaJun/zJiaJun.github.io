@@ -52,7 +52,7 @@ var name,msg = null
 - 伴生对象的apply方法是scala中是构建对象的常用方法。
 
 ```scala
-`"Hello".(4) //简写
+"Hello".(4) //简写
 "Hello".apply(4)
 ```
 
