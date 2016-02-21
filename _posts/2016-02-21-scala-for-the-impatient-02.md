@@ -67,7 +67,6 @@ a=100的值()，a的值100。由于赋值语句的值是Unit类型，所以别�
 
 - 如果要读取数组，Boolean或字符，可以用readInt，readDouble，readByte，readShort，readLong，readFloat，readBoolean或者readChar。
 
-¡
 
 
 原创文章转载请注明出处：[快学scala笔记——控制结构和函数上篇](http://9leg.com/scala/2016/02/19/scala-for-the-impatient-02.html)
