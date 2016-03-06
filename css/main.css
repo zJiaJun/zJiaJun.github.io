@@ -276,7 +276,7 @@ a         { color: #91736b; text-decoration: none; }
     position: relative;
 }
 
-.main .highlight-rouge pre:after {
+.main .highlight pre:after {
     content: "</>";
     width: 32px;
     height: 32px;
