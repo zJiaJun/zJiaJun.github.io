@@ -137,8 +137,6 @@ println(result3)
 
 ```scala
 
-
-
 val aa = Array(3,2,1)
 
 println(aa.sum) //6
