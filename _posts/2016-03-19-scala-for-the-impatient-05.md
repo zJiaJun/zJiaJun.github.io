@@ -155,7 +155,7 @@ val scores: mutable.Map[String,Int] = new java.util.TreeMap[String,Int]
 
 
 
-得到从java.util.Properties到Map[String,String]的转换
+//得到从java.util.Properties到Map[String,String]的转换
 
 import scala.collection.JavaConversion.propertiesAsScalaMap
 
@@ -163,7 +163,7 @@ val props: scala.collection.Map[String,String] = System.getProperties()
 
 
 
-scala映射转换为java映射
+//scala映射转换为java映射
 
 import scala.collection.JavaConversions.mapAsJavaMap
 
