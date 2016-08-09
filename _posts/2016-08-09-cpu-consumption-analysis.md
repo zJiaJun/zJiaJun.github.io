@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 性能调优－cpu消耗分析
-date: 2015-08-09 09:40:30
+date: 2016-08-09 09:40:30
 category: "java"
 ---
 
@@ -77,9 +77,9 @@ pidstat是sysstat中的工具，如需使用pidstat，要先安装sysstat，在�
 
 - 通过top -Hp pid查看该pid进程下的线程的cpu消耗状况，得到具体pid值
 
--  将pid值转化为16进制，这个转化后的值对应nid值的线程
+- 将pid值转化为16进制，这个转化后的值对应nid值的线程
 
-- 通过jstack pid | grep -C 20  "16进制的值" 命令查看运行程序的线程信息
+- 通过jstack pid grep -C 20  "16进制的值" 命令查看运行程序的线程信息
 
 该线程就是消耗cpu的线程，在采样时须多执行几次上述的过程，以确保找到真实的消耗cpu的线程。
 
@@ -95,6 +95,7 @@ java应用造成us过高的原因主要是线程一直处于可运行的状态Ru
 可采用的方法为通过kill -3 pid 或jstack -l pid的方法dump出java应用程序的线程信息，查看线程的状态信息以及锁信息，
 找出等待状态或锁竞争过多的线程。
 
+原创文章转载请注明出处：[性能调优－cpu消耗分析](http://9leg.com/java/2016/08/09/cpu-consumption-analysis.html)
 
 
 
