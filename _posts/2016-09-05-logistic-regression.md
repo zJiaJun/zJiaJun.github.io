@@ -188,8 +188,11 @@ g(A)的参数A为一列向量，所以实现g函数时要支持列向量作为�
 ![矩阵参数更新](/images/posts/logistic-regression/矩阵参数更新.png)
 
 综上所述，Vectorization后θ更新的步骤如下：
+
 - 求 A = X * ɵ
+
 - 求 E = g(A) - y
+
 - 求 ɵ:= ɵ - axTE
 
 
