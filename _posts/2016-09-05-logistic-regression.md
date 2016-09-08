@@ -2,7 +2,7 @@
 layout: post
 title: 机器学习之逻辑回归
 date: 2016-09-05 20:16:18
-category: "machine learning"
+category: "machine-learning"
 ---
 
 
@@ -216,4 +216,4 @@ lambda是正则项系数：
 
 
 
-原创文章转载请注明出处：[机器学习之逻辑回归](http://9leg.com/scala/2016/09/05/logistic-regression.html)
+原创文章转载请注明出处：[机器学习之逻辑回归](http://9leg.com/machine-learning/2016/09/05/logistic-regression.html)
