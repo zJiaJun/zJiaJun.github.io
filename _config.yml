@@ -40,8 +40,8 @@ timezone:      null
 
 #Site config
 title: 9leg
-description: java技术文章
-keywords: Java
+description: java,scala
+keywords: java,scala
 url: http://9leg.com
 feed: /atom.xml
 favicon: /images/shortcut.jpg
@@ -67,7 +67,7 @@ author:
     simpleIntro: I Have a Dream
     detailIntro:
       <p>广告界的程序猿</p>
-      <p>主要使用Java,会一点Android,正在学习Scala[真是难学...].</p>
+      <p>主要使用Java,会一点Android,不断学习Scala[好牛逼]...</p>
       <p></p>
 
 #Follow me, you can choose your icon by http://fortawesome.github.io/Font-Awesome/icons/#brand
