@@ -9,6 +9,7 @@
         <meta name="author" content="{{ site.author.name }}" />
         <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
         <meta name="keywords" content="{{ page.keywords | join: ',' }}" />
+        <meta name="robots" content="index,nofollow" />
         <!-- atom -->
         <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.url }}{{ site.feed }}" />
         <link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon" />
