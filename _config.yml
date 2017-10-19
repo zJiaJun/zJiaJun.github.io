@@ -39,10 +39,10 @@ timezone:      null
 
 
 #Site config
-title: 9leg
+title: zjiajun.github.io
 description: java,scala
 keywords: java,scala
-url: http://9leg.com
+url: http://zjiajun.github.io
 feed: /atom.xml
 favicon: /images/shortcut.jpg
 
