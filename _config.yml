@@ -116,7 +116,7 @@ googleAnaly:
 
 #baidu tongji
 baiduTongji:
-  config: true
+  config: false
   id: c12b560f0372d5995701449b9eac606c
 
 #comment config
@@ -125,7 +125,7 @@ disqus:
   id: piznblog
 
 duoshuo:
-  config: true
+  config: false
   id: 9leg
 
 #baidu share config
