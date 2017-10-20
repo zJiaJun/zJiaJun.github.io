@@ -131,5 +131,3 @@ duoshuo:
 #baidu share config
 baiduShare:
   config: true
-  
-theme: jekyll-theme-merlot
