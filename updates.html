@@ -6,12 +6,11 @@ permalink: /updates/
 
 <div class="timeline" id="timeline">
     {% for update in site.data.index.updates %}
-    <div class="updates-title">
-        <h4 class="updates-year">{{ update.date }}</h4>
+    <div class="archive-title">
+        <h4 class="archive-year">{{ update.date }}</h4>
     </div>
     <ul>
         {{ update.desc }}
     </ul>
     {% endfor %}
 </div>
-
