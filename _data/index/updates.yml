@@ -1,7 +1,10 @@
 # updates data
 - date: 2017-10-27
-  desc: 初始化Blog
+  desc:
+      - 初始化Blog
+      - Test 中文
 
 - date: 2017-10-28
-  desc: 修改基础配置
+  desc:
+      - 修改基础配置
 
