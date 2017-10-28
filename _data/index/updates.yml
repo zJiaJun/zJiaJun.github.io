@@ -1,7 +1,10 @@
 # updates data
-- date: 2017-10-27
-  desc: <li>初始化1</li><li>初始化1</li>
-
 - date: 2017-10-28
-  desc: <li>修改基础配置</li>
+  describe:
+    - desc: Add Updates page
+
+- date: 2017-10-27
+  describe:
+    - desc: Initialize Blog
+    - desc: Modify basic configuration
 
