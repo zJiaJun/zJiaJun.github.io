@@ -13,55 +13,18 @@ permalink: /updates/
          <li>Repair and update outdated line number format in _syntax-highlighting.scss</li>
      </ul>
 	 <!--End of Template -->
-    <div class="updates-title">
-         <h4 class="updates-year">2017-10-13</h4>
-     </div>
-     <ul>
-         <li>Modified Home page display & added back buttons for posts.</li>
-     </ul>
-    <div class="updates-title">
-         <h4 class="updates-year">2017-10-12</h4>
-     </div>
-     <ul>
-         <li>Added Resume page.</li>
-     </ul>
-    <div class="updates-title">
-         <h4 class="updates-year">2016-02-01</h4>
-     </div>
-     <ul>
-         <li>Updated syntax highlighting to a lighter theme. </li>
-     </ul>
-     <div class="updates-title">
-          <h4 class="updates-year">2015-10-05</h4>
-      </div>
-      <ul>
-          <li>Added optional line numbers to _syntax-highting.scss for code block. </li>
-      </ul>
-    <div class="updates-title">
-         <h4 class="updates-year">2015-09-17</h4>
-     </div>
-     <ul>
-         <li>Added <a href="https://www.google.com/analytics/">Google Analytics</a> for all pages.</li>
-     </ul>
-    <div class="updates-title">
-        <h4 class="updates-year">2015-09-16</h4>
+</div>
+
+
+<div class="archive">
+    <div class="timeline" id="timeline2">
+        {% for update in site.data.index.updates %}
+        <div class="updates-title">
+            <h4 class="updates-year">{{ update.date  }}</h4>
+        </div>
+        <ul>
+            <li>{{ update.desc }}</li>
+        </ul>
+        {% endfor %}
     </div>
-    <ul>
-        <li>Added timeline for updates.</li>
-    </ul>
-    <div class="updates-title">
-        <h4 class="updates-year">2015-09-15</h4>
-    </div>
-    <ul>
-        <li>File Structure Modification. </li>
-        <li>Removed several pages and sample posts.</li>
-	<li>Updated personal information and config file</li>
-    </ul>
-    <div class="updates-title">
-        <h4 class="updates-year">2015-09-14</h4>
-    </div>
-    <ul>
-        <li>Moved from Blogger and Wordpress.com to Github for personal blog.</li>
-        <li>Page officially started.</li>
-    </ul>
 </div>
