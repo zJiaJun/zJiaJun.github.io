@@ -37,7 +37,9 @@ layout: default
 
   <article class="post-content">
     {{ content }}
-    原创文章转载请注明出处: [{{ post.title }}]({{ site.url }}{{ post.url }})
+    原创文章转载请注明出处: ["{{ post.title }}"]("{{ site.url }}""{{ post.url }}")
+    <a href="{{ site.url }}{{ post.url }}" class="post-title" title="{{ post.title }}">{{ post.title }}</a>
+    <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
   </article>
 </div>
 
