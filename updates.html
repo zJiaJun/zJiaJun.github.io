@@ -10,9 +10,7 @@ permalink: /updates/
         <h4 class="updates-year">{{ update.date }}</h4>
     </div>
     <ul>
-        {% for d in site.data.index.updates.desc %}
-            <li>{{ d }}</li>
-        {% endfor %}
+        {{ update.desc }}
     </ul>
     {% endfor %}
 </div>
