@@ -5,26 +5,13 @@ permalink: /updates/
 ---
 
 <div class="timeline" id="timeline">
-	<!--Templates for timeline adds. -->
+    {% for update in site.data.index.updates %}
     <div class="updates-title">
-         <h4 class="updates-year">2017-10-18</h4>
-     </div>
-     <ul>
-         <li>Repair and update outdated line number format in _syntax-highlighting.scss</li>
-     </ul>
-	 <!--End of Template -->
-</div>
-
-
-<div class="archive">
-    <div class="timeline" id="timeline2">
-        {% for update in site.data.index.updates %}
-        <div class="updates-title">
-            <h4 class="updates-year">{{ update.date  }}</h4>
-        </div>
-        <ul>
-            <li>{{ update.desc }}</li>
-        </ul>
-        {% endfor %}
+        <h4 class="updates-year">{{ update.date }}</h4>
     </div>
+    <ul>
+        <li>{{ update.desc }}</li>
+    </ul>
+    {% endfor %}
 </div>
+
