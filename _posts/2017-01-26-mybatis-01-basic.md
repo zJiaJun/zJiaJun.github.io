@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  mybatis--01基础概念
-excerpt: mybatis框架一直在用，并没有系统的全面的深入了解，接下来就写几篇文章，梳理下流程并加深影响
 categories: [mybatis]
+tags: [mybatis]
 ---
 
-mybatis框架一直在用，并没有系统的全面的深入了解，接下来就写几篇文章，梳理下流程并加深影响。
+mybatis框架一直在用ReadingMore，并没有系统的全面的深入了解，接下来就写几篇文章，梳理下流程并加深影响。<!--more-->
 
 第一篇是基础概念，大多数文字都是mybatis官方网站文档上的。
 
@@ -26,6 +26,4 @@ mybatis框架一直在用，并没有系统的全面的深入了解，接下来�
 因此从技术层面讲，映射器的最大作用域是和SqlSession相同的，**最佳作用域是方法作用域**。
 也就是说，映射器实例应该在调用方法中请求，用过之后就可以废弃。
 
-
-原创文章转载请注明出处: [mybatis--01基础概念](http://www.9leg.com/mybatis/2017/01/27/mybatis-01-basic.html)
 

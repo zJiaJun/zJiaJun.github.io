@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 性能调优－cpu消耗分析
-date: 2016-08-09 09:40:30
-category: "java"
+category: [java]
+tags: [java]
 ---
 
 通常性能瓶颈的表现是资源消耗过多、外部处理系统的性能不足，或者资源消耗不多，但程序的响应速度却达不到要求。
@@ -12,6 +12,7 @@ category: "java"
 对于java应用而言，寻找性能瓶颈的方法通常为首先分析资源的消耗，然后结合java的一些工具来查找程序中造成资源消耗过多的代码。
 
 今天先谈一谈cpu消耗如何分析，系统为linux，jdk为sun jdk。
+<!--more-->
 
 在linux中，cpu主要用于中断、内核和用户进程的任务处理，优先级为中断>内核>用户进程，下面先讲述三个重要的概念。
 
@@ -36,7 +37,7 @@ cpu利用率为cpu在用户进程、内核、中断处理、io等待以及空闲
 
 输入top命令后既可查看cpu的消耗情况，cpu的信息在top视图的上面几行中，如图
 
-![cpu-top](/images/posts/cpu-top.png)
+![cpu-top](/img/posts/cpu-top.png)
 
 
 在这里需要关注第三行信息，下面来逐个介绍。
@@ -59,7 +60,7 @@ cpu利用率为cpu在用户进程、内核、中断处理、io等待以及空闲
 
 对于多个或多核cpu，上面的显示则会是多个cpu所占用的百分比总合。如需查看每个核的消耗情况，可在进入top视图后按1，就会按核来显示消耗情况。
 
-![cpu-top](/images/posts/cpu-top2.png)
+![cpu-top](/img/posts/cpu-top2.png)
 
 默认情况下，top视图中显示的为进程的cpu消耗状况，在top视图中按shift + h后，可按线程查看cpu的消耗状况，此时的pid既为线程id。
 
@@ -95,7 +96,6 @@ java应用造成us过高的原因主要是线程一直处于可运行的状态Ru
 可采用的方法为通过kill -3 pid 或jstack -l pid的方法dump出java应用程序的线程信息，查看线程的状态信息以及锁信息，
 找出等待状态或锁竞争过多的线程。
 
-原创文章转载请注明出处：[性能调优－cpu消耗分析](http://9leg.com/java/2016/08/09/cpu-consumption-analysis.html)
 
 
 

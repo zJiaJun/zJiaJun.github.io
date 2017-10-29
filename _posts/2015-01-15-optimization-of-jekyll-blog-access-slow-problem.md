@@ -1,11 +1,12 @@
 ---
 layout: post
 title: 优化Jekyll博客访问慢的问题
-date: 2015-01-15 12:32:10
-category: "other"
+category: [blog]
+tags: [blog]
 ---
 
 博客运行一个多月了，各方面都很满意。唯独国内访问网站速度很慢。
+<!--more-->
 
 ### 多余但必须的废话
 平时开着VPN，访问速度倒是不慢，在国内还是很有必要为自己搞一个稳定vpn的，至于原因你们都懂的，除非你肉神翻墙。那么问题来了，哪家vpn稳定且技术强？在这里推荐自己用了很长时间的vpn,不管是看YouTube，还是上google的developer.android.com速度都是刚刚的。
@@ -76,4 +77,3 @@ baiduTongji:
 
 最后测试了下，第一次访问请求资源文件保持在1-2秒之间，再次访问保持在400ms－600ms之间，比之前快了许多，可以说是秒开了。
 
-原创文章转载请注明出处: [优化Jekyll博客访问慢的问题](http://www.9leg.com/other/2015/01/15/optimization-of-jekyll-blog-access-slow-problem.html)

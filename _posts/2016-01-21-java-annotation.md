@@ -1,11 +1,12 @@
 ---
 layout: post
 title: Java注解全面解析
-date: 2016-01-21 17:03:35
-category: "java"
+category: [java]
+tags: [java]
 ---
 
-注解解析,包含基本语法,注解元素,快捷方式和JDK1.8注解增强的说明
+注解解析,包含基本语法,注解元素,快捷方式和JDK1.8注解增强的说明。
+<!--more-->
 
 ### 基本语法
 
@@ -243,7 +244,5 @@ null
 
 参考:
 
-Think in Java <br>
-[http://www.codedata.com.tw/java/jdk8-annotation-enhancement/](http://www.codedata.com.tw/java/jdk8-annotation-enhancement/){:target="_blank"}
+- [http://www.codedata.com.tw/java/jdk8-annotation-enhancement/](http://www.codedata.com.tw/java/jdk8-annotation-enhancement/){:target="_blank"}
 
-原创文章转载请注明出处：[Java注解全面解析](http://9leg.com/java/2016/01/21/java-annotation.html)

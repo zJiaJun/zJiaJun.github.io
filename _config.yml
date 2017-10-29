@@ -5,7 +5,7 @@
 #
 title: zhujiajun
 email: zhujiajun.me@gmail.com
-description: A simple and awesome blog theme powered by jekyll.
+description: zhujiajun's blog,powered by jekyll.
 url: https://zjiajun.github.io # the base hostname & protocol for your site
 keywords: ["Programming", "Java", "Scala","Blog"]
 
@@ -38,7 +38,7 @@ owner:
   job: "Java & Scala Developer"
   bio: "A backend developer who loves design awesome things. Working for MeituanDianping at in Shanghai, China."
   email: zhujiajun.me@gmail.com
-  disqus-shortname: renyuanzblog
+  disqus-shortname: #username
   twitter:  #username
   facebook: #username
   google:

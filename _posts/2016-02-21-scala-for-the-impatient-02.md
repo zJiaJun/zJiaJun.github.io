@@ -1,31 +1,29 @@
 ---
 layout: post
 title: 快学scala笔记——控制结构和函数上篇
-date: 2016-02-21 18:52:35
-category: "scala"
+category: [scala]
+tags: [scala]
 ---
+
+第二篇,控制结构和函数上篇
+<!--more-->
 
 - 在scala中，几乎所有构造出来的语法结构都有值。
 
 - scala中if/else表达式有值，这个值就是跟在if或else之后的表达式的值。
 
-```scala
-
+{% highlight scala %}
 if (x > 0) 1 else -1
-
-```
+{% endhighlight %}
 
 上述表达式的值是1或-1，具体是哪个取决于x的值。
 
 - 可以将if/else表达式赋值给变量。
 
-```scala
-
+{% highlight scala %}
 val x = if (x > 0) 1 else -1
-
 if (x > 0) s = 1 else s = -1
-
-```
+{% endhighlight %}
 
 上述的表达式第一种更好，因为可以用来初始化一个val，而第二种写法当中，s必须是var的。
 
@@ -53,13 +51,10 @@ if (x > 0) s = 1 else s = -1
 
 - 在scala中，赋值动作本身是没有值的，严格的说，值是Unit类型，写做()。
 
-```scala
-
+{% highlight scala %}
 scala> val s = {var a = 10;a=100}
-
 s: Unit = ()
-
-```
+{% endhighlight %}
 
 a=100的值()，a的值100。由于赋值语句的值是Unit类型，所以别把他们串接在一起，x＝y＝1，这是错误的，y＝1的值是()，除非你想把Unit类型的值赋给x。
 
@@ -68,5 +63,3 @@ a=100的值()，a的值100。由于赋值语句的值是Unit类型，所以别�
 - 如果要读取数组，Boolean或字符，可以用readInt，readDouble，readByte，readShort，readLong，readFloat，readBoolean或者readChar。
 
 
-
-原创文章转载请注明出处：[快学scala笔记——控制结构和函数上篇](http://9leg.com/scala/2016/02/19/scala-for-the-impatient-02.html)

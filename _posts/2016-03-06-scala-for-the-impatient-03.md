@@ -1,9 +1,12 @@
 ---
 layout: post
 title: 快学scala笔记——控制结构和函数下篇
-date: 2016-03-06 13:52:35
-category: "scala"
+category: [scala]
+tags: [scala]
 ---
+
+第三篇,控制结构和函数下篇
+<!--more-->
 
 -  scala有java相同的while和do循环。
 
@@ -17,117 +20,90 @@ category: "scala"
 
 - until方法返回一个并不包含上限的区间
 
-```scala
-
+{% highlight scala %}
 val s = "Hello"
-
 var sum = 0
-
 for (i <- 0 until s.length) //i最后的一个取值是s.length - 1
-
     sum += s(i)
-
-```
+{% endhighlight %}
 
 上面的例子中，其实并不需要使用下标，可以直接遍历字符序列
 
-```scala
-
+{% highlight scala %}
 var sum = 0
-
 for (ch <- "Hello") sum += ch
-
-```
+{% endhighlight %}
 
 - scala的for循环比起java功能要丰富的多
 
 可以以变量 <- 表达式 的形式提供多个生成器，用分号隔开。
 
-```scala
-
+{% highlight scala %}
 for (i <- 1 to 3; j <- 1 to 3) println((10 * i + j) + " ")
-
 //打印 11 12 13 21 22 23 31 32 33
-
-```
+{% endhighlight %}
 
 每个生成器都可以带一个守卫，以if开头的boolean表达式。
 
-```scala
-
+{% highlight scala %}
 for (i <- 1 to 3; j <- 1 to 3 if i != j) println((10 * i + j) + " ")
-
 //打印 12 13 21 23 31 32
+{% endhighlight %}
 
-```
 
 可以使用任意多的定义，引入可以在循环中使用变量。
 
-```scala
-
+{% highlight scala %}
 for (i <- 1 to 3; from = 4 - i; j <- from to 3) println((10 * i + j) + " ")
-
 //打印 13 22 23 31 32 33
-
-```
+{% endhighlight %}
 
 如果for循环的循环体以yield开始，则该循环会构造出一个集合，每次迭代生产集合中的一个值。
 
-```scala
-
+{% highlight scala %}
 for (i <- 1 to 10) yield i % 3
-
 //生成 Vector(1,2,0,1,2,0,1,2,0,1)
+{% endhighlight %}
 
-```
 
 这类循环叫做for推导式。
 
 for推导式生成的集合与它第一个生成器是类型兼容的。
 
-```scala
-
+{% highlight scala %}
 for ( c <- "Hello"; i <- 0 to 1) yield (c + i).toChar
-
 //生成 "HIeflmlmop"
-
 for (i < 0 to 1; c <- "Hello") yield (c + i).toChar
-
 //生成 Vector('H','e','l','l','o','I','f','m','m','p')
-
-```
+{% endhighlight %}
 
 - scala除了方法外还支持函数。方法对对象进行操作，函数不是。
 
 定义函数
 
-```sclaa
-
+{% highlight scala %}
 def abs(x: Double) = if (x >= 0) x else -x
+{% endhighlight %}
 
-```
 
 - 必须给出所有参数的类型。
 
 - 函数只要不是递归的，就不需要指定返回类型，scala编译器可以通过＝符合右侧的表达式类型推断出返回类型。
 
-```scala
-
+{% highlight scala %}
 //递归必须指定返回类型
-
 def fac(n: Int): Int = if (n <= 0) 1 else n * fac(n - 1)
+{% endhighlight %}
 
-```
 
 - 如函数体需要多个表达式完成，可以用代码块。块中最后一个表达式的值就是函数的返回值。
 
 - 在调用某些函数时并不显示地给出所有参数值，对于这些函数可以使用默认参数。
 
-```scala
-
+{% highlight scala %}
 def decorate(str: String,left: String = "[",right: String = "]") = left + str + right
+{% endhighlight %}
 
-```
 
 这个函数的left和right参数带有默认值 "[" 和 "]"。
 
@@ -141,43 +117,32 @@ decorate("Hello",">>>[")会使用right参数的默认值，得到">>>[Hello]"。
 
 - 可以在提供参数值的时候提供参数名。
 
-```scala
-
+{% highlight scala %}
 decorate(left = "<<<", str = "Hello", right = ">>>")
-
 // <<<Hello>>>
-
-```
+{% endhighlight %}
 
 带名参数并不需要跟参数列表的顺序完全一致，带名参数使函数更加可读。
 
 - 可以混用未命名参数和带名参数，只要未命名的参数是排在前面的即可。
 
-```scala
-
+{% highlight scala %}
 decorate("Hello",right = "]<<<")
-
 //将调用 decorate("Hello","[","]<<<")
+{% endhighlight %}
 
-```
 
 - 可变长度参数列表的函数,相当于java中String... args，以下是示例语法。
 
-```scala
-
+{% highlight scala %}
 def sum(args: Int*) = {
-
     var result = 0
-
     for (arg <- args) result += arg
-
     result
-
 }
-
 val s = sum(1,2,3)
+{% endhighlight %}
 
-```
 
 - 函数得到的是一个类型为Seq的参数。
 
@@ -187,17 +152,14 @@ val s = sum(1,2,3)
 
 - 调用变长参数且参数类型为Object的java方法，需要手工对基本类型进行转换。
 
-```java
-
+{% highlight java %}
 public static String format(String pattern, Object ... arguments)
+{% endhighlight %}
 
-```
 
-```scala
-
+{% highlight scala %}
 val str = MessageFormat.format("The answer to {0} is {1}","everything",42.asInstanceOf[AnyRef])
-
-```
+{% endhighlight %}
 
 - scala对于不返回值的函数有特殊的表示方法。如果函数体包含在花括号当中但没有前面的＝号，那么返回类型就是Unit。这样的函数被称做过程(procedure)。
 
@@ -205,37 +167,28 @@ val str = MessageFormat.format("The answer to {0} is {1}","everything",42.asInst
 
 - 代码例子
 
-```scala
-
+{% highlight scala %}
 def box(s: String) {
-
     val str = "---" + s + "---"
-
     println(str)
-
 }
+{% endhighlight %}
 
-```
 
 - 显示的声明Unit返回类型。
 
-```scala
-
+{% highlight scala %}
 def box(s: String): Unit = {
-
     ...
-
 }
+{% endhighlight %}
 
-```
 
 - 懒值，当val被声明为lazy时，它的初始化将被推迟，直到首次对它取值。
 
-```scala
-
+{% highlight scala %}
 lazy val words = Source.fromFile("/your/path/words").mkString
-
-```
+{% endhighlight %}
 
 如果程序不访问words，那么文件也不会被打开。
 
@@ -243,31 +196,24 @@ lazy val words = Source.fromFile("/your/path/words").mkString
 
 - 可以把懒值当作是介于val和def的中间状态。
 
-```scala
-
+{% highlight scala %}
 val words = Source.fromFile("/your/path/words").mkString
-
 //在words被定义时即被取值
-
 lazy val words = Source.fromFile("/your/path/words").mkString
-
 //在words首次使用时取值
-
 def words = Source.fromFile("/your/path/words").mkString
-
 //在每一次words被使用是取值
+{% endhighlight %}
 
-```
 
 - 懒值并不是没有额外的开销。每次访问懒值，都会有一个方法被调用，这个方法将会以线程安全的方法检查该值是否已被初始化。
 
 - scala异常工作机制和java一样。跑出异常
 
-```scala
-
+{% highlight scala %}
 throw new RuntimeException("Something wrong")
+{% endhighlight %}
 
-```
 
 - 和java一样，抛出的对象必须是java.lang.Throwable的子类。
 
@@ -277,35 +223,26 @@ throw new RuntimeException("Something wrong")
 
 那么if/else表达式的类型就是另一个分支的类型。
 
-```scala
-
+{% highlight scala %}
 if (x > 0 ) {
-
     sqrt(x)
-
 } else throw new RuntimeException("Something wrong")
+{% endhighlight %}
 
-```
 
 第一个分支类型是Double，第二个分支类型是Nothing，因此if/else表达式类型是Double。
 
 - 捕获异常的语法采用的是模式匹配的语法。
 
-```scala
-
+{% highlight scala %}
 try {
-
     println(1/0)
-
 } catch {
-
     case _: ArithmeticException => println("Something wrong")
-
     case ex: RuntimeException => ex.printStackTrace()
-
 }
+{% endhighlight %}
 
-```
 
 和java一样，更通用的异常应该排在更具体的异常之后。
 
@@ -314,5 +251,3 @@ try {
 - try/finally语句可以释放资源，不论异常有没有发生。
 
 
-
-原创文章转载请注明出处：[快学scala笔记——控制结构和函数上篇](http://9leg.com/scala/2016/03/06/scala-for-the-impatient-03.html)

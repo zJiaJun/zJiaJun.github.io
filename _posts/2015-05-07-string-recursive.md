@@ -1,11 +1,12 @@
 ---
 layout: post
 title: String中的无意识递归
-date: 2015-05-07 11:06:56
-category: "java"
+category: [java]
+tags: [java]
 ---
 
 我们知道在Java在所有类的父类是Object,容器自然也不例外。因此容器都有toString()方法，并且覆写了该方法，使容器生成的String结果能够表达容器自身，以及容器所有包含的对象。例如ArrayList的toString()方法，它会遍历ArrayList中包含的所有对象，调用每个对象的toString()方法。
+<!--more-->
 
 如果你希望toString()方法打印出对象的内存地址，也许会考虑使用this关键字。
 来看下面代码:
@@ -67,4 +68,3 @@ class User {
 
 其实不用覆写User的toString()方法，也会打印出内存地址，默认使用的Object的toString()方法。
 
-原创文章转载请注明出处: [String中的无意识递归](http://9leg.com/java/2015/05/07/string-recursive.html)

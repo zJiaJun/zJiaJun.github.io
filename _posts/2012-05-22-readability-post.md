@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Testing Readability with a Bunch of Text"
-excerpt: "A ton of text to test readability."
-categories: [paragraph]
+title: Testing Readability with a Bunch of Text
+excerpt: A ton of text to test readability.
+categories: [leonids]
 comments: true
 ---
 

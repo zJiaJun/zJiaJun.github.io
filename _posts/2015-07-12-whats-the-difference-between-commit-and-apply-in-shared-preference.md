@@ -1,13 +1,15 @@
 ---
 layout: post
 title: SharedPreference.Editor中commit和apply区别
-date: 2015-07-12 18:53:30
-category: "android"
+category: [android]
+tags: [android]
 ---
 
-学Android也有段时间了,至今还没写过文章,可能是我懒吧(其实就是懒- -),今天在练习项目的时候，被IDEA一个warning弄懵了,看下图:
+业余时间瞎学Android有段时间了,至今还没写过文章,可能是我懒吧(其实就是懒- -),今天在练习项目的时候，被IDEA一个warning弄懵了,看下图:
 
-![commit-warning](/images/posts/SharedPreference-Editor-commit-warning.jpg)
+![commit-warning](/img/posts/SharedPreference-Editor-commit-warning.jpg)
+
+<!--more-->
 
 首先*commit()*方法是为SharedPreference保存数据用的,IDEA警告意思是说,建议用*apply()*方法代替。*commit()*方法保存数据是马上执行的,而*apply()*方法会在后台执行。
 
@@ -76,5 +78,3 @@ public SharedPreferences getSharedPreferences(String name, int mode) {
 
 这是祖宗,自定义文件名称,操作模式可选,完美.
 
-
-原创文章转载请注明出处：[SharedPreference.Editor中commit和apply区别](http://9leg.com/android/2015/07/12/whats-the-difference-between-commit-and-apply-in-shared-preference.html)

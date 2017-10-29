@@ -1,15 +1,15 @@
 ---
 layout: post
 title: 快学scala笔记——基础
-date: 2016-02-19 22:20:35
-category: "scala"
+category: [scala]
+tags: [scala]
 ---
 
 去年,就开始断断续续看scala了,选择了快学scala这本书,当然最全面的肯定是Programming In Scala这本,但觉得不合适入门,可以用于后期提高.
 
 学新东西,一定要去实际使用,然而去年并没有实际scala项目的实战,16年初有幸可以实战了,但发现去年看了后,很多东西都忘记了,当要用了才去翻资料,
 上网查询.俗话说的话,好记性不如烂笔头,那就记录并且巩固下吧.
-
+<!--more-->
 
 - REPL，就是读取－求值－打印－循环的过程。
 
@@ -27,10 +27,11 @@ category: "scala"
 
 - 多个值或变量可以放在一起声明：
 
-```scala
+{% highlight scala %}
 val xmax,ymax = 100
 var name,msg = null
-```
+{% endhighlight %}
+
 - scala和java一样，也有7种数值类型：Byte，Short，Int，Long，Float，Double，Char，还有一个Boolean类型。
 
 - 上面类型在scala中都是类，并不刻意区分基本类型和引用类型。
@@ -51,12 +52,10 @@ var name,msg = null
 
 - 伴生对象的apply方法是scala中是构建对象的常用方法。
 
-```scala
+{% highlight scala %}
 "Hello".(4) //简写
 "Hello".apply(4)
-```
+{% endhighlight %}
 
 输出都是为o。在StringOps类定义了 def apply(n: Int): Char方法。
 
-
-原创文章转载请注明出处：[快学scala笔记——基础](http://9leg.com/scala/2016/02/19/scala-for-the-impatient-01.html)

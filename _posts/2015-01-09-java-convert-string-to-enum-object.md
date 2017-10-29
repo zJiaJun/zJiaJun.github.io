@@ -1,10 +1,12 @@
 ---
 layout: post
 title: Java字符串转枚举类型
-date: 2015-01-09 22:34
-category: "java"
+category: [java]
+tags: [java]
 ---
+
 如下代码有个枚举类，怎样才能将字符串“arin”转成WhoisRIR.ARIN枚举类呢？
+<!--more-->
 
 ### 问题
 
@@ -79,7 +81,5 @@ Exception in thread "main" java.lang.IllegalArgumentException:
 	at com.mkyong.whois.utils.TestEnum.main(TestEnum.java:17)
 {% endhighlight%}
 
-
-原创文章转载请注明出处:[Java字符串转枚举类型](http://www.9leg.com/java/2015/01/09/java-convert-string-to-enum-object.html)
 
 [英文原文链接](http://www.mkyong.com/java/java-convert-string-to-enum-object/){:target="_blank"}

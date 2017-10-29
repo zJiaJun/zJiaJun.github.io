@@ -1,9 +1,12 @@
 ---
 layout: post
 title: Spring注解@Primary
-date: 2015-05-05 16:05:39
-category: "spring"
+categories: [spring]
+tags: [spring]
 ---
+
+Spring中**@Primary**注解使用。
+<!--more-->
 
 假定，有如下两个类，OperaSinger and MetalSinger。
 
@@ -121,6 +124,5 @@ public class SingerService {
 }
 {% endhighlight %}
 
-原创文章转载请注明出处: [Spring注解@Primary](http://9leg.com/spring/2015/05/05/spring-annotation-primary.html)
 
 [英文原文链接](http://www.javacodegeeks.com/2015/04/spring-annotations-i-never-had-the-chance-to-use-part-1-primary.html){:target="_blank"}

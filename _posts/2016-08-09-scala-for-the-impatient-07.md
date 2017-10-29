@@ -1,13 +1,17 @@
 ---
 layout: post
 title: 快学scala笔记——对象
-date: 2016-08-09 16:45:22
-category: "scala"
+category: [scala]
+tags: [scala]
 ---
+
+第七篇,对象
+<!--more-->
+
 
 - scala没有静态字段或静态方法,可以用object语法结构达到同样的目的
 
-```scala
+{% highlight scala %}
 object Accounts {
     private var lastNumber = 0
     def newUniqueNumber() = {
@@ -15,8 +19,7 @@ object Accounts {
         lastNumber
     }
 }
-
-```
+{% endhighlight %}
 
 - 对象的构造器在该对象第一次被使用时调用,如Accounts.newUniqueNumber()首次调用时执行构造器,如果一个对象从未被使用,那么构造器也不会执行
 
@@ -27,7 +30,7 @@ object Accounts {
 - 在java中,类可以有实例方法又可以有静态方法。在scala中,可以通过类和与类同名的伴生对象达到目的
 
 
-```scala
+{% highlight scala %}
 class Account {
     val id = Account.newUniqueNumber()
     private var balance =  0.0
@@ -43,8 +46,7 @@ object Account { //伴生对象
         lastNumber
     }
 }
-
-```
+{% endhighlight %}
 
 - 类和它的伴生对象可以相互访问私有特性,但必须在同一个源文件中
 
@@ -53,7 +55,7 @@ object Account { //伴生对象
 - 对象的apply方法,当遇到Object(参数1,...,参数N),apply方法就会被调用
 
 
-```scala
+{% highlight scala %}
 class Account private (val id: Int, initialBalance: Double) {
     private var balance = initialBalance
     ...
@@ -62,30 +64,26 @@ class Account private (val id: Int, initialBalance: Double) {
 object Account { //伴生对象
     def apply(initialBalance: Double) =
         new Account(newUniqueNumber(),initialBalance)
-
     ...
 }
-
-```
+{% endhighlight %}
 
 - 这样就可以用val acct = Account(1000.0)构造了
 
 - 应用程序对象
 
-```scala
+{% highlight scala %}
 object Hello {
 
     def main(args: Array[String]) {
         //doWork
     }
 }
-
-```
+{% endhighlight %}
 
 - 扩展App特质
 
-```scala
-
+{% highlight scala %}
 object Hello extends App {
     //doWork
 }
@@ -97,8 +95,5 @@ object Hello extends App {
     else
         //doWork
 }
+{% endhighlight %}
 
-```
-
-
-原创文章转载请注明出处：[快学scala笔记——对象](http://9leg.com/scala/2016/08/09/scala-for-the-impatient-07.html)

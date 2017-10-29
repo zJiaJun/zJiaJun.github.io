@@ -10,8 +10,8 @@ permalink: /updates/
             <h4 class="archive-year">{{ update.date }}</h4>
         </div>
         <ul>
-            {% for des in update.describe %}
-                <li>{{ des.desc }}</li>
+            {% for descr in update.description %}
+                <li>{{ descr.desc }}</li>
             {% endfor %}
         </ul>
         {% endfor %}

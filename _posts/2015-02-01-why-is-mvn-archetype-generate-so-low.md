@@ -1,14 +1,15 @@
 ---
 layout: post
 title: 用maven骨架生成项目速度慢的问题
-date: 2015-02-01 15:15:40
-category: "maven"
+category: [maven]
+tags: [maven]
 ---
 
-最近从IntelliJ Idea 14的Community版本切换到Ultimate。
+用IDEA创建maven project(使用了archetype)，速度慢的令人不敢相信,记录下如何解决的。
+<!--more-->
 
 ### 问题出现
-最近从IntelliJ Idea 14的Community版本切换到Ultimate,key是从网络上下载的。安装之后，在创建maven project时(使用了archetype)，速度慢的令人不敢相信，从Idea的控制台可以看到信息停留在：
+最近从IntelliJ Idea 14的Community版本切换到Ultimate。安装之后，在创建maven project时(使用了archetype)，速度慢的令人不敢相信，从Idea的控制台可以看到信息停留在：
 
 {% highlight java %}
 [INFO] <<< maven-archetype-plugin:2.2:generate (default-cli) < generate-sources
@@ -52,4 +53,3 @@ mvn -X archetype:generate -DgroupId=com.9leg.app -DartifactId=my-app -Darchetype
 
 参考:[ARCHETYPE-202](http://jira.codehaus.org/browse/ARCHETYPE-202){:target="_blank"}
 
-原创文章转载请注明出处: [用mvn骨架生成项目速度慢的问题](http://9leg.com/maven/2015/02/01/why-is-mvn-archetype-generate-so-low.html)

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: maven的java版本随jenv切换改变而改变
-date: 2015-11-05 21:20:35
-category: "maven"
+category: [maven]
+tags: [maven]
 ---
 
-在项目中使用的还是java1.7比较多,1.8平时业余项目用用,学习下,毕竟新版本始终会代替旧版本的.在mac上推荐使用jenv工具来管理多java版本,
-能够随意切换.
-
+在项目中使用的还是java1.7比较多,1.8平时业余项学习使用,毕竟新版本始终会代替旧版本的.在mac上推荐使用jenv工具来管理多java版本,
+能够随意切换。
+<!--more-->
 
 官方网站[http://www.jenv.be/](http://www.jenv.be/){:target="_blank"},还有个是[http://jenv.io/](http://jenv.io/){:target="_blank"}
 国人开发的算是升级版本把,能够通过该工具安装java,ant,maven,tomact.对于我来说,使用jenv足够了.
@@ -19,14 +19,13 @@ jenv安装和使用就不说了,官方网站已经很详细了.使用jenv切换�
 
 在用户目录下新建 ~/.mavenrc文件,内容是:
 
-{% highlight java %}
+```
 JAVA_HOME=$(/usr/libexec/java_home -v $(jenv version-name))
-{% endhighlight %}
+```
 
 使用了jenv version-name变量,当使用jenv global 1.7或1.8的时候,mvn -v对应的java版本也能切换了.
 
-{% highlight java %}
-
+```
 zhujiajundeMacBook-Pro:Home zhujiajun$ java -version
 java version "1.8.0_66"
 Java(TM) SE Runtime Environment (build 1.8.0_66-b17)
@@ -54,11 +53,8 @@ zhujiajundeMacBook-Pro:Home zhujiajun$ java -version
 java version "1.7.0_72"
 Java(TM) SE Runtime Environment (build 1.7.0_72-b14)
 Java HotSpot(TM) 64-Bit Server VM (build 24.72-b04, mixed mode)
-
-{% endhighlight %}
-
+```
 参考:
 
-[https://github.com/gcuisinier/jenv/issues/74](https://github.com/gcuisinier/jenv/issues/74){:target="_blank"}
+- [https://github.com/gcuisinier/jenv/issues/74](https://github.com/gcuisinier/jenv/issues/74){:target="_blank"}
 
-原创文章转载请注明出处：[maven的java版本随jenv切换改变而改变](http://9leg.com/maven/2015/11/05/maven-java-version .html)

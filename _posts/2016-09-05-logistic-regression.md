@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 机器学习之逻辑回归
-date: 2016-09-05 20:16:18
-category: "machine-learning"
+category: [machine-learning]
+tags: [machine-learning]
 ---
 
 
@@ -11,6 +11,7 @@ category: "machine-learning"
 不管怎样,还是要感谢博主们贡献出来的文章,也从中收获了不少。
 
 自己学习后,把自己理解的整理归纳下,所以有了这篇文章,希望能帮助到正在学习逻辑回归的同学吧。
+<!--more-->
 
 如果哪里写的有问题,或者有疑问,请指出留言,感谢。
 
@@ -39,22 +40,22 @@ LR差不多也是这样，有一个函数 y ＝ f(X)，里面包含了N个未知
 
 ɵTx，这是参数向量和自变量向量的[点积](https://zh.wikipedia.org/wiki/%E6%95%B0%E9%87%8F%E7%A7%AF){:target="_blank"}，表达的含义：计算某个事件发生的可能性，可以把这个事件相关的所有特征加权求和。比如，要求今天下雨的可能性，可以把今天所有和下雨相关的概率加权求和，例如有台风经过权重为6，清明时期权重为9等等其他特征，每一个特征都影响"今天下雨的可能性"，用数学表达式表达:
 
-![点积](/images/posts/logistic-regression/未知参数和自变量点积.jpg)
+![点积](/img/posts/logistic-regression/未知参数和自变量点积.jpg)
 
 这个加权求和的结果是在(－∞，＋∞)范围内的，为了能表示预测的概率，要把输出值在(0，1)之间。所以，逻辑函数就出现了。
 
 
 ### [逻辑函数](https://zh.wikipedia.org/wiki/%E9%82%8F%E8%BC%AF%E5%87%BD%E6%95%B8){:target="_blank"}
 
-![逻辑函数](/images/posts/logistic-regression/逻辑函数.jpg)
+![逻辑函数](/img/posts/logistic-regression/逻辑函数.jpg)
 
 又叫Sigmoid函数
 
-![逻辑函数图形](/images/posts/logistic-regression/逻辑函数图形.jpg)
+![逻辑函数图形](/img/posts/logistic-regression/逻辑函数图形.jpg)
 
 把ɵTx代入到逻辑函数中，就形成了预测函数(hypothesis函数)
 
-![预测函数](/images/posts/logistic-regression/预测函数.jpg)
+![预测函数](/img/posts/logistic-regression/预测函数.jpg)
 
 通过逻辑函数，就可以计算出一个事件的概率(0，1)的范围内。但得到了(0，1)之间的任意值并不能进行分类，所以要把这个概率值归类。
 
@@ -81,35 +82,35 @@ y - hɵ(X)
 
 但这是当y=1的时候比较好。如果y=0，则y- hθ(x)= - hθ(x)是负数，不太好比较，则采用其绝对值hθ(x)即可。综合表示如下
 
-![cost表达式](/images/posts/logistic-regression/cost表达式.png)
+![cost表达式](/img/posts/logistic-regression/cost表达式.png)
 
-![cost表达式2](/images/posts/logistic-regression/cost表达式2.png)
+![cost表达式2](/img/posts/logistic-regression/cost表达式2.png)
 
 对于输入x分类结果为类别0和类别1的概率：
 
-![因变量概率](/images/posts/logistic-regression/因变量概率.jpg)
+![因变量概率](/img/posts/logistic-regression/因变量概率.jpg)
 
 将此表达式综合起来，既y = 1和 y ＝ 0的情况 :
 
-![因变量概率综合](/images/posts/logistic-regression/因变量概率综合.jpg)
+![因变量概率综合](/img/posts/logistic-regression/因变量概率综合.jpg)
 
 取似然函数 ：
 
-![似然函数](/images/posts/logistic-regression/似然函数.jpg)
+![似然函数](/img/posts/logistic-regression/似然函数.jpg)
 
 对数似然函数 ：
 
-![对数似然函数](/images/posts/logistic-regression/对数似然函数.png)
+![对数似然函数](/img/posts/logistic-regression/对数似然函数.png)
 
 最终J(ɵ)函数 ：
 
-![Jtheta](/images/posts/logistic-regression/Jtheta.jpg)
+![Jtheta](/img/posts/logistic-regression/Jtheta.jpg)
 
 乘了一个负的系数-1/m，所以取J(ɵ)最小值时的ɵ为要求的最佳参数。
 
 把h函数代入 ：
 
-![损失函数](/images/posts/logistic-regression/损失函数.png)
+![损失函数](/img/posts/logistic-regression/损失函数.png)
 
 已知 ：N为训练数据的条数，有多少组(X，y)，N就是多少。
 
@@ -129,11 +130,11 @@ y - hɵ(X)
 
 梯度下降求最小值，既为最优的ɵ。对J(ɵ)求偏导
 
-![Jtheta偏导](/images/posts/logistic-regression/Jtheta偏导.png)
+![Jtheta偏导](/img/posts/logistic-regression/Jtheta偏导.png)
 
 ɵ更新过程 ：
 
-![梯度下降公式](/images/posts/logistic-regression/梯度下降公式.png)
+![梯度下降公式](/img/posts/logistic-regression/梯度下降公式.png)
 
 该表达式一直被迭代执行，直到达到某个停止条件为止，比如迭代次数到达某个指定值或达到某个可以允许的误差范围。
 
@@ -149,11 +150,11 @@ a是学习率，又叫步长，初始值。如何正确定义a的值？
 
 对于LR来说，就是 ：
 
-![梯度上升公式](/images/posts/logistic-regression/梯度上升公式.gif)
+![梯度上升公式](/img/posts/logistic-regression/梯度上升公式.gif)
 
 下面是梯度下降的图形:
 
-![梯度下降图形](/images/posts/logistic-regression/梯度下降图形.png)
+![梯度下降图形](/img/posts/logistic-regression/梯度下降图形.png)
 
 
 
@@ -179,13 +180,13 @@ Vectorization是使用矩阵计算来代替for循环，简化计算，提高效�
 
 预定训练数据的矩阵形式如下，x的每一行为一条训练样本，每一列为不同的特征取值。
 
-![矩阵计算](/images/posts/logistic-regression/矩阵计算.png)
+![矩阵计算](/img/posts/logistic-regression/矩阵计算.png)
 
 g(A)的参数A为一列向量，所以实现g函数时要支持列向量作为参数，并返回列向量。由上式可知hɵ(x)-y可由g(A)-y一次计算求得。
 
 θ更新过程可以改为：
 
-![矩阵参数更新](/images/posts/logistic-regression/矩阵参数更新.png)
+![矩阵参数更新](/img/posts/logistic-regression/矩阵参数更新.png)
 
 综上所述，Vectorization后θ更新的步骤如下：
 
@@ -208,7 +209,7 @@ g(A)的参数A为一列向量，所以实现g函数时要支持列向量作为�
 
 正则化后的梯度下降算法θ的更新变为：
 
-![LRregularization](/images/posts/logistic-regression/LRregularization.png)
+![LRregularization](/img/posts/logistic-regression/LRregularization.png)
 
 lambda是正则项系数：
 
@@ -216,7 +217,3 @@ lambda是正则项系数：
 
 - 如果它的值很小，说明比较注重对训练数据的拟合，在训练数据上的偏差会小，但是可能会导致过拟合。
 
-
-
-
-原创文章转载请注明出处：[机器学习之逻辑回归](http://9leg.com/machine-learning/2016/09/05/logistic-regression.html)

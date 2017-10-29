@@ -1,11 +1,12 @@
 ---
 layout: post
 title: Spring的@PropertySource和@Value注解例子
-date: 2015-02-12 15:21:52
-category: "spring"
+categories: [spring]
+tags: [spring]
 ---
 
 在这篇文章中，我们会利用Spring的**@PropertySource**和**@Value**两个注解从配置文件properties中读取值，以及如何从配置文件中的值转换为List对象。
+<!--more-->
 
 ### 创建Spring配置Class
 
@@ -166,4 +167,3 @@ Server Jdbc : com.mysql.jdbc.Driver
 
 最后要说一点，在main方法中请使用**new AnnotationConfigApplicationContext(AppConfigTest.class)**来代替**new ClassPathXmlApplicationContext("applicationContext.xml")**或者**new FileSystemXmlApplicationContext("src/main/resources/applicationContext.xml")**。
 
-原创文章转载请注明出处: [Spring的@PropertySource和@Value注解例子](http://9leg.com/spring/2015/02/12/spring-propertysource-value-annotations-example.html)
