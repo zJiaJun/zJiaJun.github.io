@@ -5,7 +5,7 @@ categories: [mybatis]
 tags: [mybatis]
 ---
 
-mybatis框架一直在用ReadingMore，并没有系统的全面的深入了解，接下来就写几篇文章，梳理下流程并加深影响。<!--more-->
+mybatis框架一直在用，接下来就写几篇文章，梳理下流程并加深影响。<!--more-->
 
 第一篇是基础概念，大多数文字都是mybatis官方网站文档上的。
 
