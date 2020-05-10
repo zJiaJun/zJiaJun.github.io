@@ -7,7 +7,7 @@ title: zhujiajun
 email: zhujiajun.me@gmail.com
 description: zhujiajun's blog,powered by jekyll.
 url: https://zjiajun.github.io # the base hostname & protocol for your site
-keywords: ["Programming", "Java", "Scala","Blog"]
+keywords: ["jekyll", "java", "scala","blog"]
 
 #
 ###################################
@@ -26,6 +26,9 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   enable_coderay: false
+
+plugins:
+  - jemoji
 
 #
 ###################################

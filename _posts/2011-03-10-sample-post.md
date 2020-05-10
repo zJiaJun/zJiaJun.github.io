@@ -9,7 +9,6 @@ image:
   credit: thomas shellberg
   creditlink: https://unsplash.com/photos/Ki0dpxd3LGc
 ---
-
 ## HTML Elements
 
 Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
@@ -78,6 +77,10 @@ HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, c
 }
 {% endhighlight %}
 
+## Footnotes
+This is a sample post with a large feature image[^1], google[^2]
+
+
 ## Buttons
 
 Make any link standout more when applying the `.btn` class.
@@ -96,3 +99,23 @@ Make any link standout more when applying the `.btn` class.
 
 **Watch out!** You can also add notices by appending `{: .notice}` to a paragraph.
 {: .notice}
+
+## emoji
+I give this plugin two :+1:!
+@octocat :+1: This PR looks great - it's ready to merge! :shipit:
+
+
+
+## gist
+
+### gist1
+{% gist 5555251 %}
+### gist2
+{% gist 888625b9e3f6d0c824d7794c6c6a3f73 %}
+
+## Inline Attributes
+This is *red*{: style="color: red"}[^3].
+
+[^1]: Texture image courtesty of [Lovetextures](http://www.lovetextures.com/)
+[^2]: [google](https://google.com)
+[^3]: [kramdown](https://kramdown.gettalong.org/quickref.html)
