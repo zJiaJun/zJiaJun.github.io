@@ -1,13 +1,16 @@
 # updates data
+- date: 2020-05-10
+  description:
+    - desc: 增加jemoji插件, emoji换行显示问题fix,see[https://github.com/jekyll/jemoji/issues/24]
+    - desc: 增加gist插件
+    - desc: 完善sample-post
 - date: 2017-10-29
   description:
     - desc: 适配原有文章
     - desc: 统一增加转载说明
-
 - date: 2017-10-28
   description:
     - desc: Add Updates page
-
 - date: 2017-10-27
   description:
     - desc: Initialize Blog

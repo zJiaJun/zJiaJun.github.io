@@ -101,7 +101,7 @@ Make any link standout more when applying the `.btn` class.
 {: .notice}
 
 ## emoji
-I give this plugin two :+1:!
+I give this plugin two :+1:! :bug:bug:bug:
 @octocat :+1: This PR looks great - it's ready to merge! :shipit:
 
 

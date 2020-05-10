@@ -17,6 +17,12 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+img.emoji {
+  display: inline;
+  height: 1em;
+  width: 1em;
+  margin: auto;
+}
 
 // Tables
 table,

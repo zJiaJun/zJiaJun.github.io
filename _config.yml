@@ -28,6 +28,7 @@ kramdown:
   enable_coderay: false
 
 plugins:
+  - jekyll-gist
   - jemoji
 
 #
